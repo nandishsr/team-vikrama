@@ -697,15 +697,31 @@ section[id] {
   border-color: color-mix(in srgb, var(--gold) 40%, transparent);
 }
 
-.crew-card.highlight .crew-avatar {
+.crew-card.highlight .crew-initials {
   background: var(--gold);
   color: var(--ink);
 }
 
-.crew-avatar {
+.crew-avatar-wrap {
   flex-shrink: 0;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.crew-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.crew-initials {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: color-mix(in srgb, var(--leaf) 60%, transparent);
   color: var(--cream);
@@ -715,22 +731,52 @@ section[id] {
   display: grid;
   place-items: center;
   letter-spacing: 0.04em;
+  position: absolute;
+  inset: 0;
+}
+
+.crew-info {
+  min-width: 0;
 }
 
 .crew-info h3 {
   font-family: Fraunces, Georgia, serif;
   font-size: 1rem;
   font-weight: 500;
-  margin: 0 0 0.2rem;
+  margin: 0 0 0.15rem;
   line-height: 1.2;
 }
 
 .crew-tag {
-  margin: 0;
+  margin: 0 0 0.3rem;
   font-size: 0.78rem;
   color: var(--gold-soft);
   font-weight: 500;
   letter-spacing: 0.02em;
+}
+
+.crew-insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: color-mix(in srgb, var(--cream) 55%, transparent);
+  text-decoration: none;
+}
+
+.crew-insta::before {
+  content: "📸";
+  font-size: 0.7rem;
+}
+
+a.crew-insta:hover {
+  color: var(--gold-soft);
+}
+
+.crew-insta--missing {
+  font-style: italic;
+  opacity: 0.4;
+  font-size: 0.72rem;
 }
 
 @media (max-width: 860px) {
