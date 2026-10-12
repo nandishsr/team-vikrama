@@ -78,14 +78,11 @@ a {
 }
 
 .logo-mark {
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
-  background: var(--court);
-  color: var(--gold);
-  font-family: Fraunces, Georgia, serif;
+  display: block;
+  object-fit: contain;
 }
 
 .menu {
@@ -149,6 +146,14 @@ section[id] {
 .hero-copy,
 .hero-card {
   position: relative;
+}
+
+.hero-logo {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
 }
 
 .eyebrow {
